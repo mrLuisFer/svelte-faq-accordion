@@ -6,7 +6,7 @@ import Card from './components/Card/index.svelte'
   <Card />
 </main>
 
-<style type="text/scss" lang="scss">
+<style type="text/scss" lang="scss" scoped>
 .container {
   min-height: 100vh;
   background-color: var(--purpleBg);
