@@ -6,6 +6,7 @@
   --font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   --anchor-color: rgb(0, 100, 200);
+  --default-font-color: #222;
 }
 
 html,
@@ -16,13 +17,13 @@ body {
 }
 
 * {
-  padding: auto;
+  padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
 body {
-  color: #333;
+  color: var(--default-font-color);
   margin: 0;
   box-sizing: border-box;
   font-family: var(--font-family);
