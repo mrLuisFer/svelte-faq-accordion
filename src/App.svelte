@@ -8,9 +8,7 @@ import Card from './components/Card.svelte'
 
 <style type="text/scss" lang="scss">
 main {
-  text-align: center;
-  padding: 1em;
-  max-width: 240px;
-  margin: 0 auto;
+  min-height: 100vh;
+  background-color: var(--purpleBg);
 }
 </style>
