@@ -5,11 +5,15 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "start": "sirv public --no-clear"
+    "start": "sirv public --no-clear",
+    "format": "npx prettier --write .",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^11.0.0",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.0.0",
     "prettier": "^2.3.2",
     "prettier-plugin-svelte": "^2.3.1",
     "rollup": "^2.3.4",
@@ -23,5 +27,9 @@
     "node-sass": "^6.0.1",
     "sirv-cli": "^1.0.0",
     "svelte-preprocess": "^4.7.4"
+  },
+  "lint-staged": {
+    "*.{js,css,md}": "prettier --write",
+    "**/*": "prettier --write --ignore-unknown"
   }
 }
