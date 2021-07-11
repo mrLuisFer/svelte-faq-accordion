@@ -1,3 +1,9 @@
+const rules = {
+  off: 'off',
+  warn: 'warn',
+  error: 'error'
+}
+
 module.exports = {
   env: {
     browser: true,
@@ -10,7 +16,10 @@ module.exports = {
     sourceType: 'module'
   },
   plugins: ['svelte3'],
-  rules: {},
+  rules: {
+    semi: rules.off,
+    eqeqeq: rules.error
+  },
   overrides: [
     {
       files: ['*.svelte'],
