@@ -2,12 +2,19 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    node: true
+    es6: true
   },
-  extends: ['standard'],
+  extends: ['eslint:recommended', 'standard', 'prettier'],
   parserOptions: {
-    ecmaVersion: 12,
+    ecmaVersion: 2019,
     sourceType: 'module'
   },
-  rules: {}
+  plugins: ['svelte3'],
+  rules: {},
+  overrides: [
+    {
+      files: ['*.svelte'],
+      processor: 'svelte3/svelte3'
+    }
+  ]
 }
