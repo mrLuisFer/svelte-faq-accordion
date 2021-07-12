@@ -1,5 +1,6 @@
 <script>
 import CardToShowText from './CardToShowText/index.svelte'
+
 export let title
 export let textToShow
 
@@ -7,7 +8,6 @@ let active = false
 
 const handleShowText = () => {
   active = !active
-  console.log(active)
 }
 </script>
 
@@ -66,6 +66,7 @@ const handleShowText = () => {
   }
 }
 .showText {
+  display: block;
   transition: var(--transition);
   transform: rotate(180deg);
 }

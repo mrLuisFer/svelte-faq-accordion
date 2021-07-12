@@ -19,9 +19,9 @@ import CardText from './CardText/CardText.svelte'
   background: #eee;
   border-radius: 10px;
   padding: 1rem;
+  height: auto;
 
   @media (min-width: 850px) {
-    height: 400px;
     max-width: 800px;
   }
 
