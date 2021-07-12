@@ -18,8 +18,7 @@ import CardText from './CardText/CardText.svelte'
   background: #eee;
   border-radius: 10px;
   padding: 1rem;
-  display: block;
-  overflow: auto;
+
   @media (min-width: 850px) {
     max-width: 800px;
   }

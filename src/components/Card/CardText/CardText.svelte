@@ -17,9 +17,10 @@ import { cardTextItems } from './cardTextItems'
   flex-direction: column;
   row-gap: 1rem;
   justify-content: center;
+  overflow: auto;
+
   @media (min-width: 500px) {
     padding: 0 2rem;
-    height: 320px;
   }
 
   @media (min-width: 850px) {
