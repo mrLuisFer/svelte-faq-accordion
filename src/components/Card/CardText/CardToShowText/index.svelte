@@ -14,8 +14,15 @@ export let textToShow
 <style type="text/scss" lang="scss">
 .card-text {
   &-hidden {
-    text-align: center;
+    text-align: left;
     padding-bottom: 1rem;
+    opacity: 0.8;
+    transition: var(--transition);
+    font-weight: 300;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 }
 

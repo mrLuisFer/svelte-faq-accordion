@@ -13,7 +13,7 @@ const handleShowText = () => {
 
 <div class="card-text-item-container">
   <div class="card-text-item" on:click="{handleShowText}" aria-hidden="true">
-    <p>{title}</p>
+    <p class="{active && 'card-text-title-active'}">{title}</p>
     <img
       class="card-text-icon {active ? 'showText' : 'hiddenText'}"
       src="/assets/down-arrow.svg"
@@ -33,11 +33,17 @@ const handleShowText = () => {
     column-gap: 0.8rem;
     padding-bottom: 0.5rem;
     cursor: pointer;
+    padding: 0.5rem 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
 
     &-container {
       margin-bottom: 1.5rem;
-      border-bottom: 1px solid rgb(170, 170, 170);
+      border-bottom: 1px solid rgb(139, 139, 139);
     }
+  }
+  &-title-active {
+    color: var(--purpleBg);
   }
 
   &-icon {
