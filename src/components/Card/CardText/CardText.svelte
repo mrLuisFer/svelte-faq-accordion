@@ -1,17 +1,17 @@
 <script>
 import CardTextItem from './CardTextItem.svelte'
+import { cardTextItems } from './cardTextItems'
 </script>
 
 <section>
   <div class="card-text-container">
-    <CardTextItem />
+    {#each cardTextItems as textItems}
+      <CardTextItem
+        title="{textItems.title}"
+        textToShow="{textItems.textToShow}" />
+    {/each}
   </div>
 </section>
 
 <style type="text/scss" lang="scss">
-.card-text {
-  &-container {
-    border-bottom: 1px solid rgb(170, 170, 170);
-  }
-}
 </style>

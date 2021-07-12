@@ -1,5 +1,7 @@
 <script>
-import { cardTextItems } from './cardTextItems'
+import CardToShowText from './CardToShowText/index.svelte'
+export let title
+export let textToShow
 
 let active = false
 
@@ -9,20 +11,17 @@ const handleShowText = () => {
 }
 </script>
 
-<div>
-  <div class="card-text-item" on:click="{handleShowText}">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisc</p>
-    <img class="card-text-icon" src="/assets/down-arrow.svg" alt="Arrow" />
+<div class="card-text-item-container">
+  <div class="card-text-item" on:click="{handleShowText}" aria-hidden="true">
+    <p>{title}</p>
+    <img
+      class="card-text-icon {active ? 'showText' : 'hiddenText'}"
+      src="/assets/down-arrow.svg"
+      alt="Arrow"
+      draggable="false"
+      aria-hidden="false" />
   </div>
-  {#if active}
-    <p class="card-text-hidden">
-      Aenean vel dictum est. Maecenas in posuere nisl. Nullam viverra nibh in
-      nisl ultricies egestas. Donec vel urna turpis. Sed rutrum elit vitae
-      semper ultrices. Nullam imperdiet ac nibh nec varius. Aenean sit amet dui
-      velit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin
-      at aliquam est.
-    </p>
-  {/if}
+  <CardToShowText textToShow="{textToShow}" active="{active}" />
 </div>
 
 <style type="text/scss" lang="scss">
@@ -32,17 +31,30 @@ const handleShowText = () => {
     justify-content: space-between;
     align-items: center;
     column-gap: 0.8rem;
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    cursor: pointer;
+
+    &-container {
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid rgb(170, 170, 170);
+    }
   }
 
   &-icon {
     width: 15px;
     height: 15px;
     opacity: 0.8;
+    transition: var(--transition);
   }
+}
 
-  &-hidden {
-    text-align: center;
+.hiddenText {
+  &:hover {
+    transform: rotate(10deg);
   }
+}
+.showText {
+  transition: var(--transition);
+  transform: rotate(180deg);
 }
 </style>

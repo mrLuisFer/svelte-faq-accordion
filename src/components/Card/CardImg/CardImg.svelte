@@ -9,5 +9,10 @@
 .card-img {
   width: auto;
   display: block;
+  transition: var(--transition);
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 </style>

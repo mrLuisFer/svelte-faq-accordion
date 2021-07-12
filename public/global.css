@@ -7,6 +7,7 @@
     Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   --anchor-color: rgb(0, 100, 200);
   --default-font-color: #222;
+  --transition: 0.15s ease;
 }
 
 html,
