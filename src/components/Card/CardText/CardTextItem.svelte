@@ -41,6 +41,10 @@ const handleShowText = () => {
     &-container {
       margin-bottom: 1.5rem;
       border-bottom: 1px solid rgb(139, 139, 139);
+
+      @media (min-width: 850px) {
+        margin: 0;
+      }
     }
   }
   &-title-active {

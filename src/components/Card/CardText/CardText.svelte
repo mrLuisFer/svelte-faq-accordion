@@ -17,6 +17,14 @@ import { cardTextItems } from './cardTextItems'
 .card-text-container {
   @media (min-width: 500px) {
     padding: 0 2rem;
+    height: 320px;
+  }
+
+  @media (min-width: 850px) {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    justify-content: center;
   }
 }
 </style>

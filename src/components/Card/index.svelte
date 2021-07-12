@@ -6,8 +6,10 @@ import CardText from './CardText/CardText.svelte'
 
 <div class="card">
   <DynamicClickTitle defaultTitle="FAQs Card" newTitle="By mrLuisFer" />
-  <CardImg />
-  <CardText />
+  <div class="card-flex">
+    <CardImg />
+    <CardText />
+  </div>
 </div>
 
 <style type="text/scss" lang="scss">
@@ -17,5 +19,19 @@ import CardText from './CardText/CardText.svelte'
   background: #eee;
   border-radius: 10px;
   padding: 1rem;
+
+  @media (min-width: 850px) {
+    height: 400px;
+    max-width: 800px;
+  }
+
+  &-flex {
+    @media (min-width: 850px) {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+    }
+  }
 }
 </style>

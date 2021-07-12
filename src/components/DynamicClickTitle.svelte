@@ -24,5 +24,10 @@ const changeTitleValue = () => {
   &:hover {
     opacity: 1;
   }
+
+  @media (min-width: 500px) {
+    text-align: left;
+    display: inline-block;
+  }
 }
 </style>

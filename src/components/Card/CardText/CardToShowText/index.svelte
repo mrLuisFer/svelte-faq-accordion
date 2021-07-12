@@ -23,6 +23,10 @@ export let textToShow
     max-width: 400px;
   }
 
+  @media (min-width: 850px) {
+    max-width: 350px;
+  }
+
   &:hover {
     opacity: 1;
   }
