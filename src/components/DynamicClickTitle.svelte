@@ -20,6 +20,7 @@ const changeTitleValue = () => {
   font-weight: 600;
   margin: 0;
   opacity: 0.7;
+  cursor: pointer;
 
   &:hover {
     opacity: 1;
