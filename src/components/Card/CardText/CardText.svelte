@@ -13,16 +13,17 @@ import { cardTextItems } from './cardTextItems'
 
 <style type="text/scss" lang="scss">
 .card-text-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  justify-content: center;
   @media (min-width: 500px) {
     padding: 0 2rem;
     height: 320px;
   }
 
   @media (min-width: 850px) {
-    display: flex;
-    flex-direction: column;
     row-gap: 2rem;
-    justify-content: center;
   }
 }
 </style>

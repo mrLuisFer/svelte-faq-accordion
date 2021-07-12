@@ -14,20 +14,21 @@ import CardText from './CardText/CardText.svelte'
 
 <style type="text/scss" lang="scss">
 .card {
-  display: block;
   margin: 0 auto;
   background: #eee;
   border-radius: 10px;
   padding: 1rem;
-  height: auto;
-
+  display: block;
+  overflow: auto;
   @media (min-width: 850px) {
     max-width: 800px;
   }
 
   &-flex {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
     @media (min-width: 850px) {
-      display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: space-around;

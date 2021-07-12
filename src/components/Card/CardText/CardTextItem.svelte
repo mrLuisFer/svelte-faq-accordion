@@ -39,7 +39,7 @@ const handleShowText = () => {
     transition: var(--transition);
 
     &-container {
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
       border-bottom: 1px solid rgb(139, 139, 139);
 
       @media (min-width: 850px) {
