@@ -30,6 +30,18 @@ body {
   font-family: var(--font-family);
 }
 
+body::-webkit-scrollbar {
+  background: #5c33f6;
+  width: 8px;
+}
+body::-webkit-scrollbar-thumb {
+  background: #5c33f6;
+  border-radius: var(--radius);
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: #5c33f6;
+}
+
 a {
   color: var(--anchor-color);
   text-decoration: none;
