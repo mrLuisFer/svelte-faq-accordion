@@ -36,6 +36,7 @@ const handleShowText = () => {
     padding: 0.5rem 0;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-tap-highlight-color: transparent;
+    transition: var(--transition);
 
     &-container {
       margin-bottom: 1.5rem;
@@ -43,6 +44,7 @@ const handleShowText = () => {
     }
   }
   &-title-active {
+    transition: var(--transition);
     color: var(--purpleBg);
   }
 

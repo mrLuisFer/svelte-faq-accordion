@@ -12,17 +12,19 @@ export let textToShow
 </div>
 
 <style type="text/scss" lang="scss">
-.card-text {
-  &-hidden {
-    text-align: left;
-    padding-bottom: 1rem;
-    opacity: 0.8;
-    transition: var(--transition);
-    font-weight: 300;
+.card-text-hidden {
+  text-align: left;
+  padding-bottom: 1rem;
+  opacity: 0.8;
+  transition: var(--transition);
+  font-weight: 300;
 
-    &:hover {
-      opacity: 1;
-    }
+  @media (min-width: 500px) {
+    max-width: 400px;
+  }
+
+  &:hover {
+    opacity: 1;
   }
 }
 

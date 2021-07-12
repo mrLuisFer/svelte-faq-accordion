@@ -14,4 +14,9 @@ import { cardTextItems } from './cardTextItems'
 </section>
 
 <style type="text/scss" lang="scss">
+.card-text-container {
+  @media (min-width: 500px) {
+    padding: 0 2rem;
+  }
+}
 </style>

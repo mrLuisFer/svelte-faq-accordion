@@ -18,5 +18,10 @@
   &:hover {
     transform: scale(1.05);
   }
+
+  @media (min-width: 500px) {
+    width: 20rem;
+    margin: 0 auto;
+  }
 }
 </style>

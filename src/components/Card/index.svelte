@@ -1,10 +1,11 @@
 <script>
+import DynamicClickTitle from '../DynamicClickTitle.svelte'
 import CardImg from './CardImg/CardImg.svelte'
 import CardText from './CardText/CardText.svelte'
 </script>
 
 <div class="card">
-  <h1 class="card-title">FAQs Card</h1>
+  <DynamicClickTitle defaultTitle="FAQs Card" newTitle="By mrLuisFer" />
   <CardImg />
   <CardText />
 </div>
@@ -16,12 +17,5 @@ import CardText from './CardText/CardText.svelte'
   background: #eee;
   border-radius: 10px;
   padding: 1rem;
-
-  &-title {
-    font-size: 1.3rem;
-    text-align: center;
-    font-weight: 600;
-    margin: 0;
-  }
 }
 </style>
